@@ -111,24 +111,6 @@ routes.put('/update/user/:id', upload.single('imagen'), (req, res) => {
     });
 });
 
-/* routes.delete('/delete/user/:id', (req, res) => {
-    req.getConnection((err, conn) => {
-        if (err) return res.send(err);
-
-        const query = 'DELETE FROM Users WHERE id_user = ?';
-        
-        conn.query(query, [req.params.id], (err, results) => {
-            if (err) return res.send(err);
-
-            if (results.affectedRows > 0) {  // Si se eliminó algún registro
-                res.json({ success: true, message: 'User deleted successfully!' });
-            } else {
-                res.status(404).send('User not found');
-            }
-        });
-    });
-}); */
-
 routes.delete('/delete/user/:id', (req, res) => {
     const userId = req.params.id;
 
