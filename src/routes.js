@@ -7,7 +7,7 @@ const fs = require('fs');
 // Configuración de multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, './upload_image');
+    cb(null, '/app/upload_image');
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + '-' + file.originalname);

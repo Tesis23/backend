@@ -30,7 +30,7 @@ app.use(express.json())
 app.use('/', routes)
 
 //Servir imagenes Estaticas
-app.use('/images', express.static('upload_image'))
+app.use('/images', express.static('/app/upload_image'))
 
 //corriendo el server
 app.listen(app.get('port'), ()=>{

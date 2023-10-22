@@ -20,6 +20,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./src:/app/src
+      - images-volume:/app/upload_image
     ports:
       - "9000:9000"
     depends_on:
@@ -33,4 +34,5 @@ services:
 
 volumes:
   my-db:
+  images-volume:
 
